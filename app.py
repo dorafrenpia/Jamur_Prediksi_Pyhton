@@ -4,7 +4,11 @@ import sys
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 from tkinter import messagebox
+import tkinter as tk
+import subprocess
 
+def jalankan_mushroom_gui():
+    subprocess.run(["python", "mushroom_gui.py"])
 
 # Muat model dan encoders
 try:
@@ -346,6 +350,7 @@ for idx, feature in enumerate(features):
             font=("Segoe UI", 10),
             bootstyle=SUCCESS
         )
+        
 
     entry.grid(row=idx, column=1, sticky='ew', padx=5, pady=6)
     vars_inputs[feature] = var
@@ -356,6 +361,7 @@ for idx, feature in enumerate(features):
     description_label = ttk.Label(input_frame, text=desc, font=("Segoe UI", 9), bootstyle=SECONDARY)
     description_label.grid(row=idx, column=2, sticky='w', padx=10, pady=6)
 
+
 # Tombol prediksi
 predict_btn = ttk.Button(
     app,
@@ -364,7 +370,14 @@ predict_btn = ttk.Button(
     bootstyle=SUCCESS,
     width=20
 )
+
+tombol_jalankan = ttk.Button(app, text="Fitur Gambar Jamur", command=jalankan_mushroom_gui)
+
+
+# Packing sesuai urutan tampil yang diinginkan
 predict_btn.pack(pady=20)
+tombol_jalankan.pack(padx=20, pady=20)
+
 
 # Footer
 footer = ttk.Label(
