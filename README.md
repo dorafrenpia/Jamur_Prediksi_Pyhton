@@ -23,3 +23,8 @@ misal
       label_encoder.pkl,
       mushroom_dtc_model.pkl.
   paste 4 file pkl itu ke dalam folder yang sama dengan app.exe
+
+
+NOTE : bisa langsung download exe nya saja di 
+
+https://frendyhansung.itch.io/prediksi-jamur
