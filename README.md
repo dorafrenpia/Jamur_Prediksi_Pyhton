@@ -13,7 +13,7 @@ misal
 
 2. D:\>cd D:\Kuliah\Data Science\Frendy Aplikasi\Aplikasi
 
-3. lalu, pyinstall app.py
+3. lalu, pyinstaller app.py (syarat sudah install tool pyinstaller)
 
 4. tunggu hingga proses selesai
 
